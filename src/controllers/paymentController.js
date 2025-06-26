@@ -59,6 +59,7 @@ export const verifyPayment = async (req, res) => {
     });
     
      await payment.save();
+     console.log(payment);
      
      
 

@@ -7,9 +7,12 @@ import cors from 'cors';
 dotenv.config();
 const app = express();
 app.use(express.json());
+
+
 app.use(cors({
-  origin: "*"
+  exposedHeaders: ["x-rtb-fingerprint-id"]
 }));
+
 
 
 app.use('/api/payment', paymentRoutes);
